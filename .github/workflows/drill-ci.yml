@@ -1,0 +1,14 @@
+name: Drill CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  drill-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Never passing step (intentional failure)
+        run: |
+          echo "This step is intentionally failing to simulate a broken build on main."
+          exit 1
